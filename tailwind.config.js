@@ -15,6 +15,10 @@ export default {
       colors: {
         dark: "#1C1B19",
         beige: "#EDE7DB"
+      },
+      backgroundImage: {
+        'f1': "url('/public/f1.jpg)",
+        
       }
     },
   },
