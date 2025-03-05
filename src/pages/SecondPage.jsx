@@ -1,123 +1,180 @@
-import React from "react";
+import React, { useRef } from "react";
+import RotatingText from "../ui/RotatingText/RotatingText";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const SecondPage = () => {
+  const selectedRef = useRef();
+  const workRef = useRef();
+
+  useGSAP(() => {
+    gsap.fromTo(
+      selectedRef.current,
+      { y: -150 },
+      {
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: selectedRef.current,
+          start: "top 50%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      workRef.current,
+      { y: -200 },
+      {
+        y: 0,
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: workRef.current,
+          start: "top 50%",
+        },
+      }
+    );
+  });
+
   return (
-    <section className="h-auto min-h-screen w-full bg-beige border border-black flex justify-center  gap-8 px-4 p-11">
-          
-      <div className=" w-[65rem] h-auto grid grid-cols-2 grid-rows-2 gap-8 items-center justify-items-center">
-        
-      
+    <section className=" w-full h-auto mb-11 min-h-screen overflow-hidden  text-dark flex flex-col">
+      <div className="h-1/6 w-full flex items-center justify-center font-Mulish text-black font-bold  uppercase gap-11">
+        <h1
+          ref={selectedRef}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[9rem] tracking-widest"
+        >
+          selected
+        </h1>
+        <h1
+          ref={workRef}
+          className="text-4xl flex items-center justify-center sm:text-5xl md:text-6xl lg:text-7xl xl:text-[9rem] tracking-widest"
+        >
+          w
+          <span>
+            <img
+              src="../../public/pngwing.com.png"
+              alt="o"
+              className="h-[2rem] sm:h-[2rem] md:h-[5rem] lg:h-[6rem] xl:h-[8rem]"
+            />
+          </span>{" "}
+          rk
+        </h1>
+      </div>
 
-       
-        <div className=" text-beige shadow-2xl w-full h-full flex flex-col gap-4 overflow-hidden p-8 rounded-xl">
-          <img
-            src="../../public/f1.jpg"
-            className="h-3/4 rounded-lg"
-            alt="as"
-          />
-          <div>
-            <div className="flex gap-2 items-center">
-              <h1 className="text-2xl uppercase font-Prata">f1 shop georgia</h1>
-              <div className="flex items-center gap-1 ">
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-              </div>
-            </div>
-            <p className="font-Prata text-sm tracking-wide mt-2">
-              Website of Frmula 1 items and merchendise in georgia. The website
-              is built with react, typescript and tailwind css.
-            </p>
+      {/* cards div section */}
+      <div className="w-full pt-24 h-5/6 flex items-center flex-col gap-36 justify-center">
+        {/* card */}
+        <div className="bg-yellow hover:bg-[#fae28b] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-lg cursor-pointer">
+          <div className="bg-red-300 w-1/3 h-full rounded-xl overflow-hidden">
+            <img
+              src="../../public/f1.jpg"
+              alt="f1"
+              className="h-full object-cover "
+            />
           </div>
-        </div>
-       
-        <div className="bg-dark text-beige shadow-2xl w-full h-full flex flex-col gap-4 overflow-hidden p-8 rounded-xl">
-          <img
-            src="../../public/f1.jpg"
-            className="h-3/4 rounded-lg"
-            alt="as"
-          />
-          <div>
-            <div className="flex gap-2 items-center">
-              <h1 className="text-2xl uppercase font-Prata">f1 shop georgia</h1>
-              <div className="flex items-center gap-1 ">
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-              </div>
+          <div className=" w-2/3 h-full flex flex-col justify-between">
+            <div className="w-full flex mt-4 gap-1">
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                React
+              </p>
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                Tailwind
+              </p>
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                Redux
+              </p>
             </div>
-            <p className="font-Prata text-sm tracking-wide mt-2">
-              Website of Frmula 1 items and merchendise in georgia. The website
-              is built with react, typescript and tailwind css.
-            </p>
+            <h1 className="text-8xl uppercase font-Prata tracking-wider ">
+              F1 shop Georgia
+            </h1>
           </div>
         </div>
 
-        <div className="bg-dark text-beige shadow-2xl w-full h-full flex flex-col gap-4 overflow-hidden p-8 rounded-xl">
-          <img
-            src="../../public/f1.jpg"
-            className="h-3/4 rounded-lg"
-            alt="as"
-          />
-          <div>
-            <div className="flex gap-2 items-center">
-              <h1 className="text-2xl uppercase font-Prata">f1 shop georgia</h1>
-              <div className="flex items-center gap-1 ">
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-              </div>
+        {/* secondCard */}
+
+        <div className="bg-silver hover:bg-[#7cacdc] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-lg cursor-pointer">
+          <div className="bg-red-300 w-1/3 h-full rounded-xl overflow-hidden">
+            <img
+              src="../../public/mymar.jpg"
+              alt="f1"
+              className="h-full object-cover "
+            />
+          </div>
+          <div className=" w-2/3 h-full flex flex-col justify-between">
+            <div className="w-full flex mt-4 gap-1">
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                React
+              </p>
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                Styled Components
+              </p>
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                MUI
+              </p>
             </div>
-            <p className="font-Prata text-sm tracking-wide mt-2">
-              Website of Frmula 1 items and merchendise in georgia. The website
-              is built with react, typescript and tailwind css.
-            </p>
+            <h1 className="text-8xl uppercase font-Prata tracking-wider ">
+              Ecommerce website
+            </h1>
           </div>
         </div>
 
-        <div className="bg-dark text-beige shadow-2xl w-full h-full flex flex-col gap-4 overflow-hidden p-8 rounded-xl">
-          <img
-            src="../../public/f1.jpg"
-            className="h-3/4 rounded-lg"
-            alt="as"
-          />
-          <div>
-            <div className="flex gap-2 items-center">
-              <h1 className="text-2xl uppercase font-Prata">f1 shop georgia</h1>
-              <div className="flex items-center gap-1 ">
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-                <p className="text-sm bg-beige px-2 rounded-full text-dark">
-                  React
-                </p>
-              </div>
+        {/* thirdCard */}
+        <div className="bg-purple hover:bg-[#8b93ef] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-2xl cursor-pointer">
+          <div className="bg-red-300 w-1/3 h-full rounded-xl overflow-hidden">
+            <img
+              src="../../public/euro.jpg"
+              alt="euro"
+              className="h-full object-cover "
+            />
+          </div>
+          <div className=" w-2/3 h-full flex flex-col justify-between">
+            <div className="w-full flex mt-4 gap-1">
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                React
+              </p>
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                MUI
+              </p>
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                Tailwind
+              </p>
             </div>
-            <p className="font-Prata text-sm tracking-wide mt-2">
-              Website of Frmula 1 items and merchendise in georgia. The website
-              is built with react, typescript and tailwind css.
-            </p>
+            <h1 className="text-8xl uppercase font-Prata tracking-wider ">
+              Europop sportNews
+            </h1>
+          </div>
+        </div>
+
+
+        {/* fourthCard */}
+
+        <div className="bg-orange hover:bg-[#fb805b] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-2xl cursor-pointer">
+          <div className="w-1/3 h-full rounded-xl overflow-hidden">
+            <img
+              src="../../public/vit.jpg"
+              alt="euro"
+              className="h-full object-cover "
+            />
+          </div>
+          <div className=" w-2/3 h-full flex flex-col justify-between">
+            <div className="w-full flex mt-4 gap-1">
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                React
+              </p>
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                Redux
+              </p>
+              <p className="bg-white rounded-full px-4 text-lg tracking-wide font-Mulish font-semibold">
+                Taiwind
+              </p>
+            </div>
+            <h1 className="text-8xl uppercase font-Prata tracking-wider ">
+              Workout supplyment
+            </h1>
           </div>
         </div>
       </div>

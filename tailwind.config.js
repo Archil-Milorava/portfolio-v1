@@ -5,21 +5,24 @@ export default {
     extend: {
       fontFamily: {
         Prata: ["Prata", "serif"],
-        SerifDisplay: ["DM Serif Display", "serif"],
-        Cormorant: ["Cormorant Garamond", "serif"],
         Italiana: ["Italiana", "sans-serif"],
         Roboto: ["Roboto", "sans-serif"],
         Mulish: ["Mulish", "sans-serif"],
-        Urbanist: ["Urbanist", "sans-serif"],
+        Garamond: ["Garamond", "serif"],
+        Dance: ["Moon Dance", "cursive"],
+        Jakarta : ["Plus Jakarta Sans", "sans-serif"],
       },
       colors: {
         dark: "#1C1B19",
-        beige: "#EDE7DB"
+        beige: "#EDE7DB",
+        yellow: "#FFEA9E",
+        orange: "#FF8863",
+        silver: "#9BBBDC",
+        purple:"#959EFF"
       },
       backgroundImage: {
-        'f1': "url('/public/f1.jpg)",
-        
-      }
+        f1: "url('/public/f1.jpg)",
+      },
     },
   },
   plugins: [],
