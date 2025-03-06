@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import RotatingText from "../ui/RotatingText/RotatingText";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -7,8 +6,8 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 const SecondPage = () => {
-  const selectedRef = useRef();
-  const workRef = useRef();
+  const selectedRef = useRef(null);
+  const workRef = useRef(null);
 
   useGSAP(() => {
     gsap.fromTo(
@@ -27,7 +26,7 @@ const SecondPage = () => {
 
     gsap.fromTo(
       workRef.current,
-      { y: -200 },
+      { y: -250 },
       {
         y: 0,
         duration: 1.5,
@@ -41,7 +40,7 @@ const SecondPage = () => {
   });
 
   return (
-    <section className=" w-full h-auto mb-11 min-h-screen overflow-hidden  text-dark flex flex-col">
+    <section className=" w-full h-auto mb-11 min-h-screen overflow-hidden  text-dark flex flex-col bg-white">
       <div className="h-1/6 w-full flex items-center justify-center font-Mulish text-black font-bold  uppercase gap-11">
         <h1
           ref={selectedRef}
@@ -68,7 +67,7 @@ const SecondPage = () => {
       {/* cards div section */}
       <div className="w-full pt-24 h-5/6 flex items-center flex-col gap-36 justify-center">
         {/* card */}
-        <div className="bg-yellow hover:bg-[#fae28b] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-lg cursor-pointer">
+        <div className="bg-yellow hover:bg-[#fb805b] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-lg cursor-pointer">
           <div className="bg-red-300 w-1/3 h-full rounded-xl overflow-hidden">
             <img
               src="../../public/f1.jpg"
@@ -95,8 +94,7 @@ const SecondPage = () => {
         </div>
 
         {/* secondCard */}
-
-        <div className="bg-silver hover:bg-[#7cacdc] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-lg cursor-pointer">
+        <div className="bg-silver hover:bg-[#fb805b] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-lg cursor-pointer">
           <div className="bg-red-300 w-1/3 h-full rounded-xl overflow-hidden">
             <img
               src="../../public/mymar.jpg"
@@ -123,7 +121,7 @@ const SecondPage = () => {
         </div>
 
         {/* thirdCard */}
-        <div className="bg-purple hover:bg-[#8b93ef] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-2xl cursor-pointer">
+        <div className="bg-purple hover:bg-[#fb805b] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-2xl cursor-pointer">
           <div className="bg-red-300 w-1/3 h-full rounded-xl overflow-hidden">
             <img
               src="../../public/euro.jpg"
@@ -149,10 +147,8 @@ const SecondPage = () => {
           </div>
         </div>
 
-
         {/* fourthCard */}
-
-        <div className="bg-orange hover:bg-[#fb805b] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-2xl cursor-pointer">
+        <div className="bg-blue hover:bg-[#fb805b] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-2xl cursor-pointer">
           <div className="w-1/3 h-full rounded-xl overflow-hidden">
             <img
               src="../../public/vit.jpg"

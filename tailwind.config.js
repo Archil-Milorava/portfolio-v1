@@ -1,3 +1,5 @@
+import daisyui from "daisyui";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -10,7 +12,7 @@ export default {
         Mulish: ["Mulish", "sans-serif"],
         Garamond: ["Garamond", "serif"],
         Dance: ["Moon Dance", "cursive"],
-        Jakarta : ["Plus Jakarta Sans", "sans-serif"],
+        Jakarta: ["Plus Jakarta Sans", "sans-serif"],
       },
       colors: {
         dark: "#1C1B19",
@@ -18,12 +20,13 @@ export default {
         yellow: "#FFEA9E",
         orange: "#FF8863",
         silver: "#9BBBDC",
-        purple:"#959EFF"
+        purple: "#959EFF",
+        blue: "#5ca1ec",
       },
       backgroundImage: {
         f1: "url('/public/f1.jpg)",
       },
     },
   },
-  plugins: [],
+  plugins: [daisyui],
 };

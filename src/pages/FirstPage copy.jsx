@@ -7,8 +7,6 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 const FirstPage2 = () => {
-  const webDevText = Array.from({ length: 139 });
-
   const nameRef = useRef();
   const webText = useRef();
   const developerText = useRef();
@@ -29,7 +27,7 @@ const FirstPage2 = () => {
     gsap.to(webText.current, {
       scrollTrigger: {
         trigger: webText.current,
-        start: 2,
+        start: 5,
         toggleActions: "restart none none reverse",
         scrub: 4,
       },
