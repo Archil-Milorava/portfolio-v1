@@ -74,13 +74,13 @@ const FirstPage2 = () => {
         <div className="w-2/3 h-full flex flex-col text-9xl ">
           <h1
             ref={webText}
-            className=" w-full h-full flex items-end justify-end font-Prata  bg-[#e0ca9c]"
+            className=" w-full h-full flex items-end justify-end font-Prata  bg-[#b8b2a7]"
           >
             WEB
           </h1>
           <h1
             ref={developerText}
-            className=" w-full h-full flex items-start justify-end font-Prata bg-[#e0ca9c]"
+            className=" w-full h-full flex items-start justify-end font-Prata bg-[#b8b2a7]"
           >
             DEVELOPER
           </h1>

@@ -15,6 +15,7 @@ export default {
         Jakarta: ["Plus Jakarta Sans", "sans-serif"],
       },
       colors: {
+        white: "#ffff",
         dark: "#1C1B19",
         beige: "#EDE7DB",
         yellow: "#FFEA9E",

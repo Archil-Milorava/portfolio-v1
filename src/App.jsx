@@ -1,8 +1,9 @@
 import React from "react";
 import Example from "./pages/Example";
+import Experience from "./pages/Experience";
 import FirstPage2 from "./pages/FirstPage copy";
-import FourthPage from "./pages/fourthPage";
 import SecondPage from "./pages/SecondPage";
+import TechStack from "./pages/TechStack";
 
 const App = () => {
   return (
@@ -11,8 +12,8 @@ const App = () => {
         <FirstPage2 />
         <Example />
         <SecondPage />
-        <FourthPage />
-      
+        <Experience />
+        <TechStack />
     </div>
   );
 };
