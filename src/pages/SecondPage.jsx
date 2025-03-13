@@ -40,7 +40,7 @@ const SecondPage = () => {
   });
 
   return (
-    <section className=" w-full h-auto min-h-screen overflow-hidden  text-dark flex flex-col bg-gradient-to-t from-beige to-white">
+    <section className=" w-full h-auto min-h-screen overflow-hidden  text-dark flex flex-col bg-gradient-to-t from-[#E8E8E8] to-white">
       <div className="h-1/6 w-full flex items-center justify-center font-Mulish text-black font-bold  uppercase gap-11">
         <h1
           ref={selectedRef}

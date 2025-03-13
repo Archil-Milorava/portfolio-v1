@@ -38,14 +38,14 @@ const experienceList = [
 
 const Experience = () => {
   return (
-    <section className="bg-gradient-to-t from-white to-beige  h-[40rem] max-h-auto w-full  overflow-hidden flex">
+    <section className="bg-gradient-to-t from-white to-[#E8E8E8]  h-auto max-h-auto w-full py-[15rem]  overflow-hidden flex items-center justify-center">
       {/* experince text div */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={{
-          hidden: { y: 100, opacity: 0 },
+          hidden: { y: 150, opacity: 0 },
 
           visible: {
             y: 0,
@@ -73,7 +73,7 @@ const Experience = () => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={{
-        hidden: { y: 150, opacity: 0 },
+        hidden: { y: 190, opacity: 0 },
 
         visible: {
           y: 0,

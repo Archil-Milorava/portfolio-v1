@@ -10,9 +10,6 @@ export default {
         Italiana: ["Italiana", "sans-serif"],
         Roboto: ["Roboto", "sans-serif"],
         Mulish: ["Mulish", "sans-serif"],
-        Garamond: ["Garamond", "serif"],
-        Dance: ["Moon Dance", "cursive"],
-        Jakarta: ["Plus Jakarta Sans", "sans-serif"],
       },
       colors: {
         white: "#ffff",

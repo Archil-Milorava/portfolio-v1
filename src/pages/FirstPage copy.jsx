@@ -58,12 +58,12 @@ const FirstPage2 = () => {
   });
 
   return (
-    <main className=" border border-yellow-500 w-full h-screen overflow-hidden bg-beige text-dark flex flex-col">
+    <main className=" border border-yellow-500 w-full h-screen overflow-hidden bg-white text-dark flex flex-col">
       {/* Header Container */}
       <div className="h-1/6 w-full flex items-center justify-center">
         <h1
           ref={nameRef}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-Roboto font-bold tracking-widest text-dark"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-Roboto font-bold tracking-widest "
         >
           ARCHIL MILORAVA
         </h1>
@@ -71,16 +71,16 @@ const FirstPage2 = () => {
 
       {/* Placeholder for content */}
       <div className=" w-full h-5/6 flex ">
-        <div className="w-2/3 h-full flex flex-col text-9xl ">
+        <div className="w-2/3 h-full flex flex-col text-9xl   ">
           <h1
             ref={webText}
-            className=" w-full h-full flex items-end justify-end font-Prata  bg-[#b8b2a7]"
+            className=" w-full h-full flex items-end justify-end font-Prata shadow-2xl  bg-[#FAF7F1]"
           >
             WEB
           </h1>
           <h1
             ref={developerText}
-            className=" w-full h-full flex items-start justify-end font-Prata bg-[#b8b2a7]"
+            className=" w-full h-full flex items-start justify-end font-Prata shadow-2xl bg-[#FAF7F1]"
           >
             DEVELOPER
           </h1>
