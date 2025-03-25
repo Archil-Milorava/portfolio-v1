@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FirstPage2 = () => {
+const FirstPage = () => {
   const nameRef = useRef();
   const webText = useRef();
   const developerText = useRef();
@@ -58,20 +58,20 @@ const FirstPage2 = () => {
   });
 
   return (
-    <main className=" border border-yellow-500 w-full h-screen overflow-hidden bg-white text-dark flex flex-col">
+    <main className=" border border-yellow-500 w-full h-screen overflow-hidden bg-[#F5F5ED]  flex flex-col">
       {/* Header Container */}
       <div className="h-1/6 w-full flex items-center justify-center">
         <h1
           ref={nameRef}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-Roboto font-bold tracking-widest "
+          className=" sm:text-5xl md:text-5xl lg:text-5xl xl:text-[8rem]   font-bla uppercase text-[#393734] tracking-widest "
         >
-          ARCHIL MILORAVA
+          archil milorava
         </h1>
       </div>
 
       {/* Placeholder for content */}
       <div className=" w-full h-5/6 flex ">
-        <div className="w-2/3 h-full flex flex-col text-9xl   ">
+        <div className="w-2/3 h-full flex flex-col text-[11rem] text-dark   font-sense tracking-widest font-extrabold ">
           <h1
             ref={webText}
             className=" w-full h-full flex items-end justify-end font-Prata shadow-2xl  bg-[#FAF7F1]"
@@ -98,4 +98,4 @@ const FirstPage2 = () => {
   );
 };
 
-export default FirstPage2;
+export default FirstPage;

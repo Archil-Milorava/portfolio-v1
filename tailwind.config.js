@@ -6,10 +6,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Prata: ["Prata", "serif"],
-        Italiana: ["Italiana", "sans-serif"],
-        Roboto: ["Roboto", "sans-serif"],
-        Mulish: ["Mulish", "sans-serif"],
+        regio: ["regio", "sans-serif"],
+        sense: ["sense", "sans-serif"],
+        bla: ["bla", "sans-serif"],
+        ragaca: ["ragaca", "sans-serif"],
+        display: ["display", "sans-serif"],
+       
       },
       colors: {
         white: "#ffff",
