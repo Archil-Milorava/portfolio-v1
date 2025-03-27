@@ -1,40 +1,9 @@
 @font-face {
-  font-family: "regio";
-  src: url("/src/assets/fonts/Reigo-Black.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "sense";
-  src: url("/src/assets/fonts/sense.ttf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "bla";
   src: url("/src/assets/fonts/behance-64abe590e834d.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-
-
-
-@font-face {
-  font-family: "ragaca";
-  src: url("/src/assets/fonts/ragaca.ttf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "bla";
-  src: url("/src/assets/fonts/display.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 
 @tailwind base;
 @tailwind components;

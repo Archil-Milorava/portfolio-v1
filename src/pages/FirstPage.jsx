@@ -1,15 +1,14 @@
 import { useGSAP } from "@gsap/react";
-import RotatingText from "../ui/RotatingText/RotatingText";
 import { gsap } from "gsap";
-import { useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
+import { useRef } from "react";
+import "./general.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FirstPage = () => {
   const nameRef = useRef();
   const webText = useRef();
-  const developerText = useRef();
   const imageRef = useRef();
 
   useGSAP(() => {
@@ -24,26 +23,11 @@ const FirstPage = () => {
       duration: 5,
     });
 
-    gsap.to(webText.current, {
-      scrollTrigger: {
-        trigger: webText.current,
-        start: 5,
-        toggleActions: "restart none none reverse",
-        scrub: 4,
-      },
-      x: 2000,
-      paused: 2,
-    });
-
-    gsap.to(developerText.current, {
-      scrollTrigger: {
-        trigger: developerText.current,
-        start: 2,
-        toggleActions: "restart none none reverse",
-        scrub: 4,
-      },
-      x: 2000,
-    });
+    gsap.fromTo(
+      webText.current,
+      { y: 0, opacity: 0 }, // Starts below and invisible
+      { y: 0, opacity: 1, duration: 0.8, ease: "power2.inOut" } // Moves up quickly
+    );
 
     gsap.to(imageRef.current, {
       scrollTrigger: {
@@ -63,34 +47,34 @@ const FirstPage = () => {
       <div className="h-1/6 w-full flex items-center justify-center">
         <h1
           ref={nameRef}
-          className=" sm:text-5xl md:text-5xl lg:text-5xl xl:text-[8rem]   font-bla uppercase text-[#393734] tracking-widest "
+          className=" sm:text-5xl md:text-5xl lg:text-5xl xl:text-[8rem] mt-8 font-bla uppercase text-dark  tracking-widest "
         >
           archil milorava
         </h1>
       </div>
 
       {/* Placeholder for content */}
-      <div className=" w-full h-5/6 flex ">
-        <div className="w-2/3 h-full flex flex-col text-[11rem] text-dark   font-sense tracking-widest font-extrabold ">
-          <h1
+      <div className=" w-full h-5/6 flex">
+        <div className=" h-full w-2/3   flex flex-col  ">
+          <div
             ref={webText}
-            className=" w-full h-full flex items-end justify-end font-Prata shadow-2xl  bg-[#FAF7F1]"
+            className="text-dark font-bla uppercase text-8xl w-full h-full flex flex-col items-start pl-[10rem] justify-center"
           >
-            WEB
-          </h1>
-          <h1
-            ref={developerText}
-            className=" w-full h-full flex items-start justify-end font-Prata shadow-2xl bg-[#FAF7F1]"
-          >
-            DEVELOPER
-          </h1>
+            <h1>
+              Web <br /> DEveloper
+            </h1>
+            <h1>
+              from <span className="text">Georgia</span>
+            </h1>
+          </div>
         </div>
-        <div className="w-1/3 h-full flex justify-start items-center object-cover">
+
+        <div className="w-1/3 h-full flex items-center justify-start">
           <img
             ref={imageRef}
             src="../../public/Screenshot 2025-03-03 205511.png"
             alt="profile"
-            className="h-[35rem]"
+            className="h-[30rem]  object-cover"
           />
         </div>
       </div>

@@ -16,6 +16,7 @@
     "matter-js": "^0.20.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "styled-component": "^2.8.0",
     "tech-stack-icons": "^2.1.0",
     "three": "^0.167.1"
   },

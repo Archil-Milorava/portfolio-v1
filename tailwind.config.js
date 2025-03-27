@@ -6,12 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        regio: ["regio", "sans-serif"],
-        sense: ["sense", "sans-serif"],
         bla: ["bla", "sans-serif"],
-        ragaca: ["ragaca", "sans-serif"],
-        display: ["display", "sans-serif"],
-       
       },
       colors: {
         white: "#ffff",
