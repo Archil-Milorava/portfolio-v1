@@ -1,5 +1,6 @@
 import Accordion from "../components/Accordion";
 import { motion } from "framer-motion";
+import "./colorChange.css"
 
 const experienceList = [
   {
@@ -38,7 +39,7 @@ const experienceList = [
 
 const Experience = () => {
   return (
-    <section className="bg-gradient-to-t from-white to-[#E8E8E8]  h-auto max-h-auto w-full py-[15rem]  overflow-hidden flex items-center justify-center">
+    <section className="font-bla bg-gradient-to-t from-white to-[#E8E8E8]  h-auto max-h-auto w-full py-[15rem] px-[5rem]   overflow-hidden flex items-center justify-center">
       {/* experince text div */}
       <motion.div
         initial="hidden"
@@ -51,14 +52,14 @@ const Experience = () => {
             y: 0,
             opacity: 1,
             transition: {
-              duration: 1,
+              duration: 0.5,
               ease: "easeInOut",
             },
           },
         }}
         className=" w-2/6 h-full flex flex-col items-end justify-center pl-28 gap-2"
       >
-        <h1 className="text-dark text-5xl font-semibold font-Mulish uppercase ">
+        <h1 className="text-dark text-5xl font-semibold font- uppercase ">
           Experience
         </h1>
         <p className="text-dark font-Prata text-sm text-end">
@@ -68,24 +69,23 @@ const Experience = () => {
       </motion.div>
       {/* experience list div */}
       <motion.div
-      
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={{
-        hidden: { y: 190, opacity: 0 },
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: { y: 170, opacity: 0 },
 
-        visible: {
-          y: 0,
-          opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "easeInOut",
+          visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+              duration: 1,
+              ease: "easeInOut",
+            },
           },
-        },
-      }}
-      
-      className=" w-4/6 h-full flex flex-col px-11  items-center justify-center">
+        }}
+        className=" w-4/6 h-full flex flex-col px-11  items-center justify-center"
+      >
         {experienceList.map((exp, i) => (
           <Accordion key={i} exp={exp} />
         ))}

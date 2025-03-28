@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { HiOutlineArrowLongDown } from "react-icons/hi2";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,8 +66,10 @@ const SecondPage = () => {
       </div>
 
       {/* cards div section */}
-      <div className="w-full pt-24 h-5/6 flex items-center flex-col gap-36 justify-center
-      font-bridge font-bold ">
+      <div
+        className="w-full pt-24 h-5/6 flex items-center flex-col gap-36 justify-center
+      font-bla font-bold "
+      >
         {/* card */}
         <div className="bg-yellow hover:bg-[#fb805b] transition-all duration-500 w-[75rem] h-[30rem] flex p-8 gap-16 hover:shadow-lg cursor-pointer">
           <div className="bg-red-300 w-1/3 h-full rounded-xl overflow-hidden">

@@ -7,16 +7,18 @@ export default {
     extend: {
       fontFamily: {
         bla: ["bla", "sans-serif"],
+        Mulish: ["Mulish", "sans-serif"]
       },
       colors: {
         white: "#ffff",
         dark: "#1C1B19",
-        beige: "#EDE7DB",
+        beige: "#F5F5ED",
         yellow: "#FFEA9E",
         orange: "#FF8863",
         silver: "#9BBBDC",
         purple: "#959EFF",
         blue: "#5ca1ec",
+        
       },
       backgroundImage: {
         f1: "url('/public/f1.jpg)",

@@ -109,7 +109,7 @@ const other = [
 
 const TechStack = () => {
   return (
-    <section className="bg-gradient-to-t from-[#E8E8E8] to-white  h-auto max-h-auto w-full  overflow-hidden flex items-center justify-center gap-8 pb-[10rem]">
+    <section className=" bg-gradient-to-t from-[#E8E8E8] to-white font-bla  h-auto max-h-auto w-full  overflow-hidden flex items-center justify-center gap-8 pb-[10rem]">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -121,7 +121,7 @@ const TechStack = () => {
             y: 0,
             opacity: 1,
             transition: {
-              duration: 1,
+              duration: 0.5,
               ease: "easeInOut",
             },
           },

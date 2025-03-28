@@ -9,7 +9,7 @@ const Example = () => {
 
       <RotatingText
         texts={["Profesional", "Creative", "Modern", "Interactive"]}
-        mainClassName=" text-[50px] text-[#F1F1F1] h-[4rem] w-[20rem] text-center rounded-xl px-2 justify-center tracking-wider text-beige font-sense font-semibold bg-dark"
+        mainClassName=" text-[50px] text-[#F1F1F1] h-[4rem] w-[20rem] text-center rounded-xl px-2 justify-center tracking-wider text-beige font-sense font-semibold bg-dark font-bla"
         staggerFrom={"last"}
         initial={{ y: "100%" }}
         animate={{ y: 0 }}
